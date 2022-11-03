@@ -51,7 +51,7 @@ export default function Timer({
       </div>
       {ticking && (
 				<button className="uppercase text-white underline mt-5" onClick={reset}>
-					Reset
+					Resetar
 				</button>
 			)}
     </div>

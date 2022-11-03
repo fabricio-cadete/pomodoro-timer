@@ -5,32 +5,10 @@ export default function About() {
     <div className="w-11/12 mx-auto mt-36 text-white p-5">
 			<div>
 				<h1 className="text-xl sm:text-2xl font-medium">
-					<span className="border-b-4 border-red-400 ">What</span> is Pomodoro
-					Technique?
+					<span className="border-b-4 border-red-400 ">O que</span> é a técnica Pomodoro?
 				</h1>
 				<p className="mt-5 tracking-wide opacity-70 text-lg">
-					The Pomodoro Technique is created by Francesco Cirillo for a more
-					productive way to work and study. The technique uses a timer to break
-					down work into intervals, traditionally 25 minutes in length,
-					separated by short breaks. Each interval is known as a pomodoro, from
-					the Italian word for 'tomato', after the tomato-shaped kitchen timer
-					that Cirillo used as a university student.
-				</p>
-			</div>
-			<div className="mt-5">
-				<h1 className="text-xl sm:text-2xl font-medium">
-					<span className="border-b-4 border-red-400 ">What</span> is Daily
-					Focus?
-				</h1>
-				<p className="mt-5 tracking-wide opacity-70 text-lg break-words">
-					Daily focus is small clone project from{" "}
-					<a href="https://pomofocus.io/" target="_blank" className="underline">
-						https://pomofocus.io/.
-					</a>
-					It is open source and here is the code.
-					<a href="https://pomofocus.io/" target="_blank" className="underline">
-						https://github.com/Chensokheng/pomodoro
-					</a>
+                    A Técnica Pomodoro foi criada por Francesco Cirillo para uma forma mais produtiva de trabalhar e estudar. A técnica usa um cronômetro para dividir o trabalho em intervalos, tradicionalmente de 25 minutos, separados por pequenos intervalos. Cada intervalo é conhecido como pomodoro, da palavra italiana para 'tomate', em homenagem ao cronômetro de cozinha em forma de tomate que Cirillo usou quando estudante universitário.
 				</p>
 			</div>
 		</div>

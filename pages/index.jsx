@@ -3,6 +3,7 @@ import About from "../components/About";
 import Alarm from "../components/Alarm";
 import Navigation from "../components/Navigation";
 import Timer from "../components/Timer";
+import ModalSetting from "../components/ModalSetting";
 
 export default function Home() {
   const [pomodoro, setPomodoro] = useState(25);
@@ -13,8 +14,21 @@ export default function Home() {
   const [consumedSeconds, setConsumedSeconds] = useState(0);
   const [stage, setStage] = useState(0);
   const [isTimeup, setIsTimeUp] = useState(false);
+  const [openSetting, setOpenSetting] = useState(false);
 
   const alarmRef = useRef();
+  const pomodoroRef = useRef();
+  const shortBreakRef = useRef();
+  const longBreakRef = useRef();
+
+  const updateTimeDefaultValue = () => {
+      setPomodoro(pomodoroRef.current.value);
+      setShortBreak(shortBreakRef.current.value);
+      setLongBreak(longBreakRef.current.value);
+      setOpenSetting(false);
+      setSeconds(0);
+      setConsumedSeconds(0);
+  };
 
   const switchStage = (index) => {
     const isYes = consumedSeconds && stage !== index ? confirm("Você tem certeza que quer cancelar a contagem atual?"): false;
@@ -108,7 +122,7 @@ export default function Home() {
   return (
     <div className="bg-gray-900 min-h-screen font-inter">
       <div className="max-w-2xl min-h-screen mx-auto">
-        <Navigation />
+          <Navigation setOpenSetting={setOpenSetting} />
         <Timer
           stage={stage}
           switchStage={switchStage}
@@ -122,6 +136,14 @@ export default function Home() {
         />
         <About />
         <Alarm ref={alarmRef} />
+          <ModalSetting
+              openSetting={openSetting}
+              setOpenSetting={setOpenSetting}
+              pomodoroRef={pomodoroRef}
+              shortBreakRef={shortBreakRef}
+              longBreakRef={longBreakRef}
+              updateTimeDefaultValue={updateTimeDefaultValue}
+          />
       </div>
     </div>
   );
